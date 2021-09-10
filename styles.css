@@ -1,0 +1,136 @@
+body {
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+  height: 100vh;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-container {
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-image: url("./images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top -1px center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.illustration {
+  position: absolute;
+  top: -110px;
+}
+
+.img-mobile {
+  padding-right: 20px;
+}
+
+.img-desk {
+  display: none;
+}
+.img-box {
+  display: none;
+}
+
+.summary {
+  border-radius: 20px;
+  min-width: 330px;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  list-style-position: outside;
+  padding: 5px;
+}
+
+.question {
+  background: url("./images/icon-arrow-down.svg") no-repeat right 10px top 20px;
+  vertical-align: middle;
+  margin: 10px;
+  line-height: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 120px;
+}
+hr {
+  border: none;
+  height: 0.5px;
+  background-color: hsl(240, 5%, 91%);
+  align-items: center;
+  margin-left: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(237, 12%, 33%);
+}
+a:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.question {
+  font-size: 0.85rem;
+}
+
+.answer {
+  font-size: 0.8rem;
+  display: none;
+  font-weight: 400;
+  line-height: normal;
+}
+.question:nth-of-type(2) {
+  color: hsl(237, 12%, 33%);
+  font-weight: 700;
+}
+
+.question:nth-of-type(2) > div {
+  display: block;
+}
+
+@media screen and (min-width: 965px) {
+  .main-container {
+    min-width: 920px;
+    height: 470px;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    background-image: url("/images/illustration-woman-online-desktop.svg"),
+      url("./images/bg-pattern-desktop.svg");
+    background-position: top 62px left -70px, bottom -150px left -560px;
+    background-repeat: no-repeat no-repeat;
+  }
+  .img-box {
+    display: block;
+    position: absolute;
+    top: 200px;
+    left: -92px;
+  }
+  .illustration {
+    display: none;
+  }
+  h1 {
+    text-align: left;
+    margin-left: 13px;
+    margin-top: 30px;
+  }
+  .summary {
+    max-width: 350px;
+    margin-right: 100px;
+    height: 100%;
+  }
+}
